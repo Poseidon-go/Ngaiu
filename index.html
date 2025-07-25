@@ -11,162 +11,20 @@
 
 <body>
     <div id="app">
-        <div id="floating-hearts"></div>
-        <div id="rainbow-bg"></div>
-        <div id="sparkle-container"></div>
-        <div id="rose-petals"></div>
-
-        <div id="main-container">
-            <div id="header">
-                <div id="love-meter">
-                    <div class="meter-label">💕 Độ yêu Na:</div>
-                    <div class="meter-bar">
-                        <div id="love-fill"></div>
-                        <div class="meter-sparkle">✨</div>
-                    </div>
-                    <div id="love-percentage">0%</div>
-                </div>
-
-                <h1 id="main-title">
-                    <span class="title-word">💖</span>
-                    <span class="title-word">Na</span>
-                    <span class="title-word">ơi</span>
-                    <span class="title-word">💖</span>
-                </h1>
-                <div id="subtitle">
-                    <span class="typing-text">Anh có những lời ngọt ngào muốn
-                        nói với em...</span>
-                    <span class="cursor">|</span>
-                </div>
-
-                <div id="mood-ring">
-                    <div class="mood-emoji" id="current-mood">😊</div>
-                    <div class="mood-label">Mood của Na</div>
-                </div>
+        <div id="main">
+            <div id="heart-container"></div>
+            <h1 id="question">Chào Na! Hôm nay Na thế nào? 😊</h1>
+            <div id="btn-question">
+                <button class="btn" id="btn-compliment">Khen Na 🌟</button>
+                <button class="btn" id="btn-tease">Chọc Na 😜</button>
+                <button class="btn" id="btn-joke">Kể Joke 😂</button>
             </div>
-
-            <div id="question-section">
-                <div id="question-text">Chọn một cách để anh thể hiện tình cảm
-                    với em nhé! 💕</div>
-                <div id="question-counter">
-                    <span class="counter-icon">💌</span>
-                    Tin nhắn tình: <span id="current-question">0</span>
-                    <span class="infinity">∞</span>
-                </div>
-            </div>
-
-            <div id="button-container">
-                <button class="action-btn cute-btn" id="btn-cute-question">
-                    <div class="btn-glow"></div>
-                    <span class="btn-icon">🥰</span>
-                    <span class="btn-text">Hỏi điều dễ thương</span>
-                    <div class="btn-hearts">💕💕💕</div>
-                </button>
-
-                <button class="action-btn flirt-btn" id="btn-flirt">
-                    <div class="btn-glow"></div>
-                    <span class="btn-icon">😘</span>
-                    <span class="btn-text">Thả thính sến súa</span>
-                    <div class="btn-hearts">💋💋💋</div>
-                </button>
-
-                <button class="action-btn tease-btn" id="btn-tease">
-                    <div class="btn-glow"></div>
-                    <span class="btn-icon">😜</span>
-                    <span class="btn-text">Trêu em yêu</span>
-                    <div class="btn-hearts">😏😏😏</div>
-                </button>
-
-                <button class="action-btn compliment-btn" id="btn-compliment">
-                    <div class="btn-glow"></div>
-                    <span class="btn-icon">🌟</span>
-                    <span class="btn-text">Khen em xinh</span>
-                    <div class="btn-hearts">👑👑👑</div>
-                </button>
-
-                <button class="action-btn special-btn" id="btn-special">
-                    <div class="btn-glow rainbow-glow"></div>
-                    <span class="btn-icon">💎</span>
-                    <span class="btn-text">Lời yêu đặc biệt</span>
-                    <div class="btn-hearts">💖💖💖</div>
-                </button>
-
-                <button class="action-btn poem-btn" id="btn-poem">
-                    <div class="btn-glow"></div>
-                    <span class="btn-icon">📝</span>
-                    <span class="btn-text">Thơ tình</span>
-                    <div class="btn-hearts">🌹🌹🌹</div>
-                </button>
-            </div>
-
-            <div id="response-section" class="hidden">
-                <div id="response-header">
-                    <div class="response-icon">💌</div>
-                    <div class="response-title">Tin nhắn từ trái tim anh</div>
-                </div>
-                <div id="response-text"></div>
-                <div id="response-actions">
-                    <button id="btn-heart-react" class="react-btn">
-                        <span class="react-icon">❤️</span>
-                        <span class="react-text">Yêu</span>
-                    </button>
-                    <button id="btn-next" class="next-btn">
-                        <span class="next-icon">✨</span>
-                        <span class="next-text">Tiếp theo</span>
-                    </button>
-                    <button id="btn-save" class="save-btn">
-                        <span class="save-icon">💾</span>
-                        <span class="save-text">Lưu lại</span>
-                    </button>
-                </div>
-            </div>
-
-            <div id="stats-section">
-                <div class="stat-item">
-                    <div class="stat-icon-container">
-                        <span class="stat-icon">💕</span>
-                        <div class="stat-pulse"></div>
-                    </div>
-                    <div class="stat-content">
-                        <span class="stat-label">Điểm thính</span>
-                        <span id="flirt-score" class="stat-value">0</span>
-                    </div>
-                </div>
-
-                <div class="stat-item">
-                    <div class="stat-icon-container">
-                        <span class="stat-icon">🔥</span>
-                        <div class="stat-pulse"></div>
-                    </div>
-                    <div class="stat-content">
-                        <span class="stat-label">Độ hot</span>
-                        <span id="hotness-level" class="stat-value">🔥</span>
-                    </div>
-                </div>
-
-                <div class="stat-item">
-                    <div class="stat-icon-container">
-                        <span class="stat-icon">💎</span>
-                        <div class="stat-pulse"></div>
-                    </div>
-                    <div class="stat-content">
-                        <span class="stat-label">Level tình yêu</span>
-                        <span id="love-level" class="stat-value">1</span>
-                    </div>
-                </div>
-            </div>
-
-            <div id="saved-messages" class="hidden">
-                <div class="saved-header">
-                    <span class="saved-icon">💌</span>
-                    <span class="saved-title">Tin nhắn đã lưu</span>
-                </div>
-                <div id="saved-list"></div>
+            <div id="message" class="hidden"></div>
+            <div id="na-mood" class="hidden">
+                <h2>Mood của Na hôm nay:</h2>
+                <div id="mood-display">😊</div>
             </div>
         </div>
-
-        <div id="special-effects"></div>
-        <div id="fireworks"></div>
     </div>
 
     <script src="script.js"></script>
